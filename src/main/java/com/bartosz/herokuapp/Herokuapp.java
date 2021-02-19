@@ -14,18 +14,26 @@ public class Herokuapp {
     }
 
     @FindBy(xpath = "//li/a[contains(text(),'Add')]")
-    private WebElement addRemoveElementsLink;
+    private WebElement addRemoveElementsSite;
     @FindBy(xpath = "//li/a[contains(text(),'Basic')]")
-    private WebElement basicAuth;
-
+    private WebElement basicAuthSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Challenging DOM')]")
+    private WebElement ChallengingDOMSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Context Menu')]")
+    private WebElement ContextMenuSite;
 
 
     public void goToAddRemoveElements() {
-        addRemoveElementsLink.click();
+        addRemoveElementsSite.click();
     }
+
     public void goToBasicAuth() {
-        basicAuth.click();
+        basicAuthSite.click();
     }
+
+    public void goToChallengingDOM() { ChallengingDOMSite.click(); }
+
+    public void goToContextMenu() { ContextMenuSite.click(); }
 
 
 }

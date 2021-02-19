@@ -11,6 +11,8 @@ public abstract class BaseHerokuappTest {
     protected Herokuapp herokuapp;
     protected AddRemoveButton addRemoveButton;
     protected BasicAuthorization basicAuthorization;
+    protected ChallengingDOM challengingDOM;
+    protected ContextMenu contextMenu;
 
     @BeforeMethod
     public void setup() {
@@ -21,6 +23,8 @@ public abstract class BaseHerokuappTest {
         herokuapp = new Herokuapp(driver);
         addRemoveButton = new AddRemoveButton(driver);
         basicAuthorization = new BasicAuthorization(driver);
+        challengingDOM = new ChallengingDOM(driver);
+        contextMenu = new ContextMenu(driver);
         driver.get("http://the-internet.herokuapp.com/");
     }
 
