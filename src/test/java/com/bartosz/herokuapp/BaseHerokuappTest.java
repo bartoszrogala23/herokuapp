@@ -13,6 +13,7 @@ public abstract class BaseHerokuappTest {
     protected BasicAuthorization basicAuthorization;
     protected ChallengingDOM challengingDOM;
     protected ContextMenu contextMenu;
+    protected DisappearingElementsSite disappearingElementsSite;
 
     @BeforeMethod
     public void setup() {
@@ -25,6 +26,7 @@ public abstract class BaseHerokuappTest {
         basicAuthorization = new BasicAuthorization(driver);
         challengingDOM = new ChallengingDOM(driver);
         contextMenu = new ContextMenu(driver);
+        disappearingElementsSite = new DisappearingElementsSite(driver);
         driver.get("http://the-internet.herokuapp.com/");
     }
 

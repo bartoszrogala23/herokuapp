@@ -18,10 +18,11 @@ public class Herokuapp {
     @FindBy(xpath = "//li/a[contains(text(),'Basic')]")
     private WebElement basicAuthSite;
     @FindBy(xpath = "//li/a[contains(text(),'Challenging DOM')]")
-    private WebElement ChallengingDOMSite;
+    private WebElement challengingDOMSite;
     @FindBy(xpath = "//li/a[contains(text(),'Context Menu')]")
-    private WebElement ContextMenuSite;
-
+    private WebElement contextMenuSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Disappearing Elements')]")
+    private WebElement disappearingElementsSite;
 
     public void goToAddRemoveElements() {
         addRemoveElementsSite.click();
@@ -31,9 +32,11 @@ public class Herokuapp {
         basicAuthSite.click();
     }
 
-    public void goToChallengingDOM() { ChallengingDOMSite.click(); }
+    public void goToChallengingDOM() { challengingDOMSite.click(); }
 
-    public void goToContextMenu() { ContextMenuSite.click(); }
+    public void goToContextMenu() { contextMenuSite.click(); }
+
+    public  void goToDisappearingElements() { disappearingElementsSite.click();}
 
 
 }
