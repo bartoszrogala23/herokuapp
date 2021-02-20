@@ -17,17 +17,30 @@ public class DynamicContent {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css =".large-2")
+    @FindBy(css = ".large-2")
     private WebElement imageAvatarElements;
 
     @FindBy(css = ".large-10")
     private WebElement textElements;
 
-    public void getAvatarList() {
-
+    public List<String> getAvatarList() {
+        List<WebElement> avatarList = driver.findElements(By.cssSelector(".large-2"));
+        List<String> srcElements = new ArrayList<>();
+        for (int i = 0; i < avatarList.size(); i++) {
+            String found = imageAvatarElements.getAttribute("src");
+            srcElements.add(found);
+        }
+        return srcElements;
     }
 
-    public void refreshSite() { driver.navigate().refresh(); }
+    public void refreshSite() {
+        driver.navigate().refresh();
+    }
+
+
+    public String getAttribute() {
+        return imageAvatarElements.getAttribute("src");
+    }
 
 
 }
