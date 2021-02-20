@@ -25,6 +25,10 @@ public class Herokuapp {
     private WebElement disappearingElementsSite;
     @FindBy(xpath = "//li/a[contains(text(),'Drag and Drop')]")
     private WebElement dragAndDropSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Dropdown')]")
+    private WebElement dropdownSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Dynamic Content')]")
+    private WebElement dynamicContentSite;
 
 
 
@@ -43,6 +47,10 @@ public class Herokuapp {
     public void goToDisappearingElements() { disappearingElementsSite.click();}
 
     public void goToDragAndDrop() { dragAndDropSite.click(); }
+
+    public void goToDropdown() { dropdownSite.click(); }
+
+    public void goToDynamicContent() { dynamicContentSite.click(); }
 
 
 }

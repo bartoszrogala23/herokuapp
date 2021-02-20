@@ -15,6 +15,8 @@ public abstract class BaseHerokuappTest {
     protected ContextMenu contextMenu;
     protected DisappearingElementsSite disappearingElementsSite;
     protected DragAndDropSite dragAndDropSite;
+    protected DropdownSite dropdownSite;
+    protected DynamicContent dynamicContent;
 
     @BeforeMethod
     public void setup() {
@@ -29,6 +31,8 @@ public abstract class BaseHerokuappTest {
         contextMenu = new ContextMenu(driver);
         disappearingElementsSite = new DisappearingElementsSite(driver);
         dragAndDropSite = new DragAndDropSite(driver);
+        dropdownSite = new DropdownSite(driver);
+        dynamicContent = new DynamicContent(driver);
         driver.get("http://the-internet.herokuapp.com/");
     }
 
