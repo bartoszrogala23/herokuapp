@@ -23,6 +23,10 @@ public class Herokuapp {
     private WebElement contextMenuSite;
     @FindBy(xpath = "//li/a[contains(text(),'Disappearing Elements')]")
     private WebElement disappearingElementsSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Drag and Drop')]")
+    private WebElement dragAndDropSite;
+
+
 
     public void goToAddRemoveElements() {
         addRemoveElementsSite.click();
@@ -36,7 +40,9 @@ public class Herokuapp {
 
     public void goToContextMenu() { contextMenuSite.click(); }
 
-    public  void goToDisappearingElements() { disappearingElementsSite.click();}
+    public void goToDisappearingElements() { disappearingElementsSite.click();}
+
+    public void goToDragAndDrop() { dragAndDropSite.click(); }
 
 
 }

@@ -14,6 +14,7 @@ public abstract class BaseHerokuappTest {
     protected ChallengingDOM challengingDOM;
     protected ContextMenu contextMenu;
     protected DisappearingElementsSite disappearingElementsSite;
+    protected DragAndDropSite dragAndDropSite;
 
     @BeforeMethod
     public void setup() {
@@ -27,6 +28,7 @@ public abstract class BaseHerokuappTest {
         challengingDOM = new ChallengingDOM(driver);
         contextMenu = new ContextMenu(driver);
         disappearingElementsSite = new DisappearingElementsSite(driver);
+        dragAndDropSite = new DragAndDropSite(driver);
         driver.get("http://the-internet.herokuapp.com/");
     }
 
