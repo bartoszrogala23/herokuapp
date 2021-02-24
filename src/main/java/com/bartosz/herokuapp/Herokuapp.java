@@ -29,6 +29,8 @@ public class Herokuapp {
     private WebElement dropdownSite;
     @FindBy(xpath = "//li/a[contains(text(),'Dynamic Content')]")
     private WebElement dynamicContentSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Dynamic Controls')]")
+    private WebElement dynamicControlsSite;
 
 
 
@@ -51,6 +53,8 @@ public class Herokuapp {
     public void goToDropdown() { dropdownSite.click(); }
 
     public void goToDynamicContent() { dynamicContentSite.click(); }
+
+    public void goToDynamicControls() { dynamicControlsSite.click(); }
 
 
 }
