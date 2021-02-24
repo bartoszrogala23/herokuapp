@@ -8,26 +8,33 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class DynamicContent {
     final protected WebDriver driver;
+
 
     public DynamicContent(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(css = ".large-2")
+    @FindBy(css = ".large-2 img")
     private WebElement imageAvatarElements;
 
     @FindBy(css = ".large-10")
     private WebElement textElements;
 
+
+    public String getAttribute() {
+        return imageAvatarElements.getAttribute("src");
+    }
+
     public List<String> getAvatarList() {
         List<WebElement> avatarList = driver.findElements(By.cssSelector(".large-2"));
         List<String> srcElements = new ArrayList<>();
         for (int i = 0; i < avatarList.size(); i++) {
-            String found = imageAvatarElements.getAttribute("src");
+            String found = getAttribute();
             srcElements.add(found);
         }
         return srcElements;
@@ -35,11 +42,6 @@ public class DynamicContent {
 
     public void refreshSite() {
         driver.navigate().refresh();
-    }
-
-
-    public String getAttribute() {
-        return imageAvatarElements.getAttribute("src");
     }
 
 
