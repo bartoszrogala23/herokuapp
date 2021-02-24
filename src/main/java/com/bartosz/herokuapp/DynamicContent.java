@@ -26,12 +26,12 @@ public class DynamicContent {
     private WebElement textElements;
 
 
-    public String getAttribute() {
+    private String getAttribute() {
         return imageAvatarElements.getAttribute("src");
     }
 
     public List<String> getAvatarList() {
-        List<WebElement> avatarList = driver.findElements(By.cssSelector(".large-2"));
+        List<WebElement> avatarList = driver.findElements(By.cssSelector(".large-2 img"));
         List<String> srcElements = new ArrayList<>();
         for (int i = 0; i < avatarList.size(); i++) {
             String found = getAttribute();

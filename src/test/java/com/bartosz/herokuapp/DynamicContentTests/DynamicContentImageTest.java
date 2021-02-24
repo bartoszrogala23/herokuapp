@@ -19,11 +19,7 @@ public class DynamicContentImageTest extends BaseHerokuappTest {
         assertThat(before).isNotEqualTo(after);
     }
 
-    @Test
-    public void getAtr() {
-        herokuapp.goToDynamicContent();
-        dynamicContent.getAttribute();
-    }
+
 
 
 }
