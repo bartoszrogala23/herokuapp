@@ -17,6 +17,8 @@ public abstract class BaseHerokuappTest {
     protected DragAndDropSite dragAndDropSite;
     protected DropdownSite dropdownSite;
     protected DynamicContent dynamicContent;
+    protected DynamicControl dynamicControl;
+    protected FormAuthentication formAuthentication;
 
     @BeforeMethod
     public void setup() {
@@ -33,6 +35,8 @@ public abstract class BaseHerokuappTest {
         dragAndDropSite = new DragAndDropSite(driver);
         dropdownSite = new DropdownSite(driver);
         dynamicContent = new DynamicContent(driver);
+        dynamicControl = new DynamicControl(driver);
+        formAuthentication = new FormAuthentication(driver);
         driver.get("http://the-internet.herokuapp.com/");
     }
 

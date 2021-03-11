@@ -31,6 +31,8 @@ public class Herokuapp {
     private WebElement dynamicContentSite;
     @FindBy(xpath = "//li/a[contains(text(),'Dynamic Controls')]")
     private WebElement dynamicControlsSite;
+    @FindBy(xpath = "//li/a[contains(text(),'Form Authentication')]")
+    private WebElement formAuthenticationSite;
 
 
 
@@ -55,6 +57,8 @@ public class Herokuapp {
     public void goToDynamicContent() { dynamicContentSite.click(); }
 
     public void goToDynamicControls() { dynamicControlsSite.click(); }
+
+    public void goToformAuthentication() { formAuthenticationSite.click(); }
 
 
 }

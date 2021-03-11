@@ -7,21 +7,21 @@ import java.util.ArrayList;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class DynamicContentImageTest extends BaseHerokuappTest {
+public class DynamicContentCommentsTest extends BaseHerokuappTest {
 
     /**
      * Dynamic content site changes avatars and comments content if site is refreshed.
-     * test verifies if users avatars are changing after site refreshing.
-     * list of avatars' URLs after refresh should be different than
-     * avatars' URLs before refresh
+     * test verifies if users comments are changing after site refreshing.
+     * users comments after refresh should be different than
+     * users comments before refresh.
      */
 
     @Test
-    public void AvatarChangeAfterRefreshTest() {
+    public void CommentChangeAfterRefreshTest() {
         herokuapp.goToDynamicContent();
-        ArrayList<String> before = (ArrayList<String>) dynamicContent.getAvatarList();
+        ArrayList<String> before = (ArrayList<String>) dynamicContent.getCommentList();
         dynamicContent.refreshSite();
-        ArrayList<String> after = (ArrayList<String>) dynamicContent.getAvatarList();
+        ArrayList<String> after = (ArrayList<String>) dynamicContent.getCommentList();
         assertThat(before).isNotEqualTo(after);
     }
 

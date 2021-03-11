@@ -5,6 +5,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +36,10 @@ public class DynamicControl {
     private WebElement enableButton;
     @FindBy(css = "[id=\"input-example\"] #message")
     private WebElement inputMessage;
+    @FindBy(xpath = "//button[contains(text(),'Disable')]")
+    private WebElement disableButton;
+
+
 
 
     public void checkboxClick() {
@@ -48,9 +54,23 @@ public class DynamicControl {
         addButton.click();
     }
 
-    public void enableClick() {
-        enableButton.click();
+    public String getMessage() {
+        return inputMessage.getText();
     }
+
+    public void enableInputField() {
+        enableButton.click();
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(inputMessage));
+    }
+
+    public void disableButton() {
+        disableButton.click();
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        wait.until(ExpectedConditions.visibilityOf(inputMessage));
+    }
+
+
 
     public void sendText() {
         textInputField.sendKeys("I am testing this field");
