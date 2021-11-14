@@ -24,7 +24,7 @@ public class DragAndDropSite {
     public void moveElement() {
         Actions actions = new Actions(driver);
 //        TODO: DragAndDropSite does not move blockA to indicated element (blockB) - fix it.
-        actions.clickAndHold(blockA).moveToElement(blockB).release().build().perform();
+        actions.clickAndHold(blockA).moveByOffset(1000,0).release().build().perform();
     }
 
     public Point getPosition() {

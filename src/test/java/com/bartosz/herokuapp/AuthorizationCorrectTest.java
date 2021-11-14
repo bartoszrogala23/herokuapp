@@ -4,7 +4,7 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class CorrectAuthorizationTest extends BaseHerokuappTest {
+public class AuthorizationCorrectTest extends BaseHerokuappTest {
 
     @Test
     public void correctAuthTest() {

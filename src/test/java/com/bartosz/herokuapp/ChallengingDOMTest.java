@@ -5,7 +5,7 @@ import org.testng.annotations.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class ChallengingDOMTest extends BaseHerokuappTest{
-    /** negative test **/
+    /** negative test : there were some changes on the site -> delete button doesn't work.**/
 
     @Test
     public void countTheRowsAfterRandomDelete() {

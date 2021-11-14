@@ -23,6 +23,10 @@ public class BasicAuthorization {
         driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
     }
 
+    public void incorrectAuth() {
+        driver.get("http://abc:admin@the-internet.herokuapp.com/basic_auth");
+    }
+
     public String getLoginStatus() {
         return loginStatus.getText();
     }

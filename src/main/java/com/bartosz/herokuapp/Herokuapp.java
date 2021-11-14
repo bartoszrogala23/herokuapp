@@ -33,7 +33,8 @@ public class Herokuapp {
     private WebElement dynamicControlsSite;
     @FindBy(xpath = "//li/a[contains(text(),'Form Authentication')]")
     private WebElement formAuthenticationSite;
-
+    @FindBy(css = "[href='/nested_frames']")
+    private WebElement nestedFrameSite;
 
 
     public void goToAddRemoveElements() {
@@ -44,21 +45,40 @@ public class Herokuapp {
         basicAuthSite.click();
     }
 
-    public void goToChallengingDOM() { challengingDOMSite.click(); }
+    public void goToChallengingDOM() {
+        challengingDOMSite.click();
+    }
 
-    public void goToContextMenu() { contextMenuSite.click(); }
+    public void goToContextMenu() {
+        contextMenuSite.click();
+    }
 
-    public void goToDisappearingElements() { disappearingElementsSite.click();}
+    public void goToDisappearingElements() {
+        disappearingElementsSite.click();
+    }
 
-    public void goToDragAndDrop() { dragAndDropSite.click(); }
+    public void goToDragAndDrop() {
+        dragAndDropSite.click();
+    }
 
-    public void goToDropdown() { dropdownSite.click(); }
+    public void goToDropdown() {
+        dropdownSite.click();
+    }
 
-    public void goToDynamicContent() { dynamicContentSite.click(); }
+    public void goToDynamicContent() {
+        dynamicContentSite.click();
+    }
 
-    public void goToDynamicControls() { dynamicControlsSite.click(); }
+    public void goToDynamicControls() {
+        dynamicControlsSite.click();
+    }
 
-    public void goToformAuthentication() { formAuthenticationSite.click(); }
+    public void goToformAuthentication() {
+        formAuthenticationSite.click();
+    }
 
+    public void goToNestedFrameSite() {
+        nestedFrameSite.click();
+    }
 
 }
