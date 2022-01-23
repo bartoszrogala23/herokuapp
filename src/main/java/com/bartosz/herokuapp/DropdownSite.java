@@ -2,7 +2,6 @@ package com.bartosz.herokuapp;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
@@ -24,7 +23,6 @@ public class DropdownSite {
     private WebElement selectedItem;
 
     public void selectValue1() {
-        Actions actions = new Actions(driver);
         dropdownList.click();
         value1.click();
     }
@@ -32,5 +30,4 @@ public class DropdownSite {
     public String getItemName() {
        return selectedItem.getText();
     }
-
 }

@@ -35,4 +35,3 @@ public class AddRemoveButton {
         return foundElements.size();
     }
 }
-

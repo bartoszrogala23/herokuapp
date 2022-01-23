@@ -10,7 +10,6 @@ import java.util.List;
 public class DisappearingElementsSite {
     final protected WebDriver driver;
 
-
     public DisappearingElementsSite(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);
@@ -28,7 +27,4 @@ public class DisappearingElementsSite {
         }
         while (firstCount == countTheButtons());
     }
-
-
 }
-
