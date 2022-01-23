@@ -14,7 +14,5 @@ public class AddRemoveElementsTest extends BaseHerokuappTest {
         int after = addRemoveButton.countButtons();
         addRemoveButton.deleteElement();
         assertThat(before).isLessThan(after);
-
     }
 }
-
