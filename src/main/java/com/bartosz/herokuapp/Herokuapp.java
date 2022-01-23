@@ -36,7 +36,6 @@ public class Herokuapp {
     @FindBy(css = "[href='/nested_frames']")
     private WebElement nestedFrameSite;
 
-
     public void goToAddRemoveElements() {
         addRemoveElementsSite.click();
     }
@@ -76,9 +75,4 @@ public class Herokuapp {
     public void goToformAuthentication() {
         formAuthenticationSite.click();
     }
-
-    public void goToNestedFrameSite() {
-        nestedFrameSite.click();
-    }
-
 }

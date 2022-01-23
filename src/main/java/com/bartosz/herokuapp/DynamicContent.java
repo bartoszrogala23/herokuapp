@@ -29,8 +29,8 @@ public class DynamicContent {
     public List<String> getAvatarList() {
         List<WebElement> avatarList = driver.findElements(By.cssSelector(".large-2 img"));
         List<String> srcElements = new ArrayList<>();
-        for (int i = 0; i < avatarList.size(); i++) {
-            String avatarSource = avatarList.get(i).getAttribute("src");
+        for (WebElement webElement : avatarList) {
+            String avatarSource = webElement.getAttribute("src");
             srcElements.add(avatarSource);
         }
         return srcElements;
@@ -39,8 +39,8 @@ public class DynamicContent {
     public List<String> getCommentList() {
         List<WebElement> commentList = driver.findElements(By.cssSelector(".large-10"));
         List<String> textElements = new ArrayList<>();
-        for (int i = 0; i < commentList.size(); i++) {
-            String comment = commentList.get(i).getText();
+        for (WebElement webElement : commentList) {
+            String comment = webElement.getText();
             textElements.add(comment);
         }
         return textElements;

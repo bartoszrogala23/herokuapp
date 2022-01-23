@@ -1,15 +1,11 @@
 package com.bartosz.herokuapp;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class DynamicControl {
     final protected WebDriver driver;
@@ -39,21 +35,6 @@ public class DynamicControl {
     @FindBy(xpath = "//button[contains(text(),'Disable')]")
     private WebElement disableButton;
 
-
-
-
-    public void checkboxClick() {
-        checkbox.click();
-    }
-
-    public void removeButtonClick() {
-        removeButton.click();
-    }
-
-    public void addClick() {
-        addButton.click();
-    }
-
     public String getMessage() {
         return inputMessage.getText();
     }
@@ -70,19 +51,7 @@ public class DynamicControl {
         wait.until(ExpectedConditions.visibilityOf(inputMessage));
     }
 
-
-
     public void sendText() {
         textInputField.sendKeys("I am testing this field");
     }
-
-
-
-
-
-
-
-
-
-
 }

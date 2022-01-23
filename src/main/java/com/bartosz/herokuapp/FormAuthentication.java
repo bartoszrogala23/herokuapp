@@ -44,5 +44,4 @@ public class FormAuthentication {
     public String getMessage() {
         return driver.findElement(By.cssSelector("#flash")).getText();
     }
-
 }
