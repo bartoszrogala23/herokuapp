@@ -24,8 +24,4 @@ public class DynamicContentImageTest extends BaseHerokuappTest {
         ArrayList<String> after = (ArrayList<String>) dynamicContent.getAvatarList();
         assertThat(before).isNotEqualTo(after);
     }
-
-
-
-
 }

@@ -23,6 +23,5 @@ public class EnableDisableTest extends BaseHerokuappTest {
         assertThat(afterEnable).isNotEqualTo(afterDisable);
         assertThat(afterEnable).isEqualTo("It's enabled!");
         assertThat(afterDisable).isEqualTo("It's disabled!");
-
     }
 }

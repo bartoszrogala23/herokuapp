@@ -24,8 +24,4 @@ public class DynamicContentCommentsTest extends BaseHerokuappTest {
         ArrayList<String> after = (ArrayList<String>) dynamicContent.getCommentList();
         assertThat(before).isNotEqualTo(after);
     }
-
-
-
-
 }
