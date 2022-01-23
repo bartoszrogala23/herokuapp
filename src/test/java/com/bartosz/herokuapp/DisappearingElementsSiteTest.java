@@ -13,6 +13,5 @@ public class DisappearingElementsSiteTest extends BaseHerokuappTest {
         disappearingElementsSite.refreshSite();
         int after = disappearingElementsSite.countTheButtons();
         assertThat(before).isNotEqualTo(after);
-
     }
 }

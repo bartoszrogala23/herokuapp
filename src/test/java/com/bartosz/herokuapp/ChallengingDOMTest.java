@@ -15,5 +15,4 @@ public class ChallengingDOMTest extends BaseHerokuappTest{
         int after = challengingDOM.countTheRows();
         assertThat(before).isEqualTo(after);
     }
-
 }

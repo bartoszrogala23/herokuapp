@@ -6,7 +6,6 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class DropdownSiteTest extends BaseHerokuappTest{
 
-
     @Test
     public void dropdownTest(){
         herokuapp.goToDropdown();
@@ -14,9 +13,5 @@ public class DropdownSiteTest extends BaseHerokuappTest{
         dropdownSite.selectValue1();
         String after = dropdownSite.getItemName();
         assertThat(before).isNotEqualTo(after);
-
-
     }
-
-
 }

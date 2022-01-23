@@ -39,5 +39,4 @@ public abstract class BaseHerokuappTest {
         formAuthentication = new FormAuthentication(driver);
         driver.get("http://the-internet.herokuapp.com/");
     }
-
 }

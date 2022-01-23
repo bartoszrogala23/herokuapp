@@ -14,6 +14,5 @@ public class DragAndDropSiteTest extends BaseHerokuappTest{
         dragAndDropSite.moveElement();
         Point after = dragAndDropSite.getPosition();
         assertThat(before).isNotEqualTo(after);
-
     }
 }
