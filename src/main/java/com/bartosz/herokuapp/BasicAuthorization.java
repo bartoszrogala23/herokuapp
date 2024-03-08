@@ -15,15 +15,15 @@ public class BasicAuthorization {
 
     @FindBy(xpath = ".example")
     private WebElement properAuth;
-    @FindBy(xpath = "//p")
+    @FindBy(css = "#content")
     private WebElement loginStatus;
 
 
-    public void correctAuth() {
+    public void authorizeUsingCorrectCredentials() {
         driver.get("http://admin:admin@the-internet.herokuapp.com/basic_auth");
     }
 
-    public void incorrectAuth() {
+    public void authorizeUsingIncorrectCredentials() {
         driver.get("http://abc:admin@the-internet.herokuapp.com/basic_auth");
     }
 

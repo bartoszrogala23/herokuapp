@@ -4,13 +4,13 @@ import org.testng.annotations.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class AuthorizationCorrectTest extends BaseHerokuappTest {
+public class BasicAuthorizationTest extends BaseHerokuappTest {
 
     @Test
-    public void correctAuthTest() {
+    public void correctAuthorizationTest() {
         herokuapp.navigateToTopic("Basic Auth");
-        basicAuthorization.correctAuth();
+        basicAuthorization.authorizeUsingCorrectCredentials();
         String expectedMessage = "Congratulations! You must have the proper credentials.";
-        assertThat(basicAuthorization.getLoginStatus()).isEqualTo(expectedMessage);
+        assertThat(basicAuthorization.getLoginStatus()).containsIgnoringCase(expectedMessage);
     }
 }
