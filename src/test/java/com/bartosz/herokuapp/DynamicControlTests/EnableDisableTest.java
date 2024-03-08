@@ -14,7 +14,7 @@ public class EnableDisableTest extends BaseHerokuappTest {
 
     @Test
     public void enablePutTextAndDisableField() {
-        herokuapp.selectTopic("Dynamic Controls");
+        herokuapp.navigateToTopic("Dynamic Controls");
         dynamicControl.enableInputField();
         String afterEnable = dynamicControl.getMessage();
         dynamicControl.sendText();

@@ -18,7 +18,7 @@ public class DynamicContentCommentsTest extends BaseHerokuappTest {
 
     @Test
     public void CommentChangeAfterRefreshTest() {
-        herokuapp.selectTopic("Dynamic Content");
+        herokuapp.navigateToTopic("Dynamic Content");
         ArrayList<String> before = (ArrayList<String>) dynamicContent.getCommentList();
         dynamicContent.refreshSite();
         ArrayList<String> after = (ArrayList<String>) dynamicContent.getCommentList();

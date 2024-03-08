@@ -8,7 +8,7 @@ public class DropdownSiteTest extends BaseHerokuappTest{
 
     @Test
     public void dropdownTest(){
-        herokuapp.selectTopic("Dropdown");
+        herokuapp.navigateToTopic("Dropdown");
         String before = dropdownSite.getItemName();
         dropdownSite.selectValue1();
         String after = dropdownSite.getItemName();

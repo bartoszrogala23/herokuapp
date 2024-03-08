@@ -8,7 +8,7 @@ public class DisappearingElementsSiteTest extends BaseHerokuappTest {
 
     @Test
     public void refreshSiteToMakeElementDisappear() {
-        herokuapp.selectTopic("Disappearing Elements");
+        herokuapp.navigateToTopic("Disappearing Elements");
         int before = disappearingElementsSite.countTheButtons();
         disappearingElementsSite.refreshSite();
         int after = disappearingElementsSite.countTheButtons();

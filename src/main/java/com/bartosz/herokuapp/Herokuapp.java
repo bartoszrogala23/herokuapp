@@ -14,7 +14,7 @@ public class Herokuapp {
 
     private final String TOPIC_SELECTOR = "//li/a[contains(text(),'%s')]";
 
-    public void selectTopic(String name) {
+    public void navigateToTopic(String name) {
         By topicLocator = By.xpath(String.format(TOPIC_SELECTOR, name));
         this.driver.findElement(topicLocator).click();
     }
