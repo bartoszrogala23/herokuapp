@@ -12,7 +12,6 @@ import java.time.Duration;
 public class DynamicControl {
     final protected WebDriver driver;
 
-
     public DynamicControl(WebDriver driver) {
         this.driver = driver;
         PageFactory.initElements(driver, this);

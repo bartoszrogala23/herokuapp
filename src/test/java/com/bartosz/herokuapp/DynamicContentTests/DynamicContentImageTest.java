@@ -18,7 +18,7 @@ public class DynamicContentImageTest extends BaseHerokuappTest {
 
     @Test
     public void AvatarChangeAfterRefreshTest() {
-        herokuapp.goToDynamicContent();
+        herokuapp.selectTopic("Dynamic Content");
         ArrayList<String> before = (ArrayList<String>) dynamicContent.getAvatarList();
         dynamicContent.refreshSite();
         ArrayList<String> after = (ArrayList<String>) dynamicContent.getAvatarList();

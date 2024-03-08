@@ -9,7 +9,7 @@ public class ChallengingDOMTest extends BaseHerokuappTest{
 
     @Test
     public void countTheRowsAfterRandomDelete() {
-        herokuapp.goToChallengingDOM();
+        herokuapp.selectTopic("Challenging DOM");
         int before = challengingDOM.countTheRows();
         challengingDOM.deleteRandomRow();
         int after = challengingDOM.countTheRows();

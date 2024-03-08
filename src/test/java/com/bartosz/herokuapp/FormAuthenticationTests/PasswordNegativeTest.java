@@ -9,7 +9,7 @@ public class PasswordNegativeTest extends BaseHerokuappTest {
 
     @Test
     public void positiveLoginTest() {
-        herokuapp.goToformAuthentication();
+        herokuapp.selectTopic("Form Authentication");
         formAuthentication.incorrectPassword();
         String expectedResult = "Your password is invalid!";
         assertThat(formAuthentication.getMessage()).contains(expectedResult);

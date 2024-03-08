@@ -39,10 +39,10 @@ public class DynamicContent {
     public List<String> getCommentList() {
         List<WebElement> commentList = driver.findElements(By.cssSelector(".large-10"));
         List<String> textElements = new ArrayList<>();
-        for (WebElement webElement : commentList) {
+        commentList.forEach(webElement -> {
             String comment = webElement.getText();
             textElements.add(comment);
-        }
+        });
         return textElements;
     }
 }

@@ -9,7 +9,7 @@ public class PositiveTest extends BaseHerokuappTest {
 
     @Test
     public void positiveLoginTest() {
-        herokuapp.goToformAuthentication();
+        herokuapp.selectTopic("Form Authentication");
         formAuthentication.positiveLogin();
         String expectedResult = "You logged into a secure area!";
         assertThat(formAuthentication.getMessage()).contains(expectedResult);

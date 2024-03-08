@@ -8,7 +8,7 @@ public class AddRemoveElementsTest extends BaseHerokuappTest {
 
     @Test
     public void AddAndRemoveElement() {
-        herokuapp.goToAddRemoveElements();
+        herokuapp.selectTopic("Add/Remove Elements");
         int before = addRemoveButton.countButtons();
         addRemoveButton.addElement();
         int after = addRemoveButton.countButtons();

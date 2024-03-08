@@ -9,7 +9,7 @@ public class UsernameNegativeTest extends BaseHerokuappTest {
 
     @Test
     public void positiveLoginTest() {
-        herokuapp.goToformAuthentication();
+        herokuapp.selectTopic("Form Authentication");
         formAuthentication.incorrectUsername();
         String expectedResult = "Your username is invalid!";
         assertThat(formAuthentication.getMessage()).contains(expectedResult);

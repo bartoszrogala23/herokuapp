@@ -9,7 +9,7 @@ public class DragAndDropSiteTest extends BaseHerokuappTest{
 
     @Test
     public void moveTheElement() {
-        herokuapp.goToDragAndDrop();
+        herokuapp.selectTopic("Drag and Drop");
         Point before = dragAndDropSite.getPosition();
         dragAndDropSite.moveElement();
         Point after = dragAndDropSite.getPosition();

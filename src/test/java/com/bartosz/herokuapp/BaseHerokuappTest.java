@@ -2,10 +2,10 @@ package com.bartosz.herokuapp;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeMethod;
 
-import java.util.concurrent.TimeUnit;
+import java.time.Duration;
 
 public abstract class BaseHerokuappTest {
     protected Herokuapp herokuapp;
@@ -23,9 +23,9 @@ public abstract class BaseHerokuappTest {
     @BeforeMethod
     public void setup() {
         WebDriverManager.chromedriver().setup();
-        WebDriver driver = new FirefoxDriver();
+        WebDriver driver = new ChromeDriver();
         driver.manage().window().maximize();
-        driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         herokuapp = new Herokuapp(driver);
         addRemoveButton = new AddRemoveButton(driver);
         basicAuthorization = new BasicAuthorization(driver);

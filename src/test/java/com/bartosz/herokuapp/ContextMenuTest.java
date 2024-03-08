@@ -11,7 +11,7 @@ public class ContextMenuTest extends BaseHerokuappTest {
 
     @Test
     public void getAlertFromSiteTest() {
-        herokuapp.goToContextMenu();
+        herokuapp.selectTopic("Context Menu");
         contextMenu.rightClickHotSpot();
         contextMenu.acceptTheAlert();
     }
