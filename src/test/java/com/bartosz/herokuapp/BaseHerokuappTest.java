@@ -19,6 +19,7 @@ public abstract class BaseHerokuappTest {
     protected DynamicContent dynamicContent;
     protected DynamicControl dynamicControl;
     protected FormAuthentication formAuthentication;
+    protected BrokenImage brokenImage;
 
     @BeforeMethod
     public void setup() {
@@ -37,6 +38,7 @@ public abstract class BaseHerokuappTest {
         dynamicContent = new DynamicContent(driver);
         dynamicControl = new DynamicControl(driver);
         formAuthentication = new FormAuthentication(driver);
+        brokenImage = new BrokenImage(driver);
         driver.get("http://the-internet.herokuapp.com/");
     }
 }

@@ -7,7 +7,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 public class BasicAuthorizationTest extends BaseHerokuappTest {
 
     @Test
-    public void correctAuthorizationTest() {
+    public void correctAuthTest() {
         herokuapp.navigateToTopic("Basic Auth");
         basicAuthorization.authorizeUsingCorrectCredentials();
         String expectedMessage = "Congratulations! You must have the proper credentials.";
